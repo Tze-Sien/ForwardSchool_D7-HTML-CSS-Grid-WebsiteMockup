@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+/* Most used elemets */
+
+
+/* Center horizontal and vertical */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section Padding */
+section {
+    padding: 5rem 5rem;
+    margin-right: 4rem;
+}
+
+section h2, h3{
+    color: #0f542b;
+    font-size: 2.8rem;
+}
+
+
+
+/* Flex Left and Right */ 
+.flex-leftright {
+    display: flex;
+}
+
+/* Section details heading */
+.section-details {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 4rem;
+}
+
+.section-details h2 {
+    margin-bottom: 2rem;
+}
+
+.section-details p{
+    text-align: left;
+    font-size: 1.5rem;
+    color: rgb(100, 100, 100);
+}
+
+/* Most used elemets Ends*/
+
+/* nav */
+
+nav {
+    position: fixed;
+    z-index: 0;
+    height: 100vh;
+    background: url("https://summit.microsoftedge.com/assets/images/emerald-pattern.svg");
+    top: 0;
+    right: 0;
+    width: 20rem;
+}
+
+nav .navigation {
+    position: absolute;
+    bottom: 0;
+    height: 30rem;
+    background-color: #0f542b;
+    width: 100%;
+    padding: 3.375rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav .navigation ul li {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+nav .navigation ul li:first-child::before{
+    content: "·";
+    position: absolute;
+    font-size: 50px;
+    left: -1rem;
+    line-height: 3rem;
+}
+
+
+
+/* nav end */
+
+/* Header */
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 20rem;
+    grid-template-rows: 1fr 30rem;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.header-hero {
+    grid-column: 1 / span 3;
+    background: url("https://summit.microsoftedge.com/assets/images/seattle-xxl.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+}
+
+/* Header Start-Upper Part*/
+
+.header-hero .header-content {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 2rem;
+}
+
+.header-hero .header-content img {
+    position: absolute;
+    left: -16rem;
+    top: 4rem;
+    width: 15rem;
+}
+
+.header-hero .header-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.header-hero .header-content span {
+    font-weight: 100;
+}
+
+
+.header-hero .header-content .date-button {
+    text-align: left;
+}
+
+.header-hero .header-content .date-button p {
+    margin-bottom: 1.2rem;
+    font-size:1.5rem;
+}
+
+.header-hero .header-content .date-button #date:after{
+    content: "/";
+    margin: 0 2rem;
+}
+
+.header-hero .header-content button {
+    display: inline-block;
+    text-align: center;
+    border: none;
+    padding: 1rem 1rem; 
+    background: #167a3e;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Header Upper Part End*/
+
+/* Header LowerPart-large*/
+
+.header-lower-large {
+    padding: 0 10rem;
+    font-size:2.5rem;
+    line-height: 3rem;
+    background: #eaf2ed;
+    font-weight: 100;
+    color: rgb(78, 78, 78);
+}
+
+/* Header LowerPart-large End*/
+
+
+/* Header LowerPart-small*/
+.header-lower-small {
+    text-align: center;
+    color: rgb(78, 78, 78);
+    padding: 3.375rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: #f6faf8;
+}
+
+.header-lower-small p span.with-cross::after{
+    content: "+";   
+    display: block;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 2rem;
+    color: #0f542b;
+}
+
+/* Header LowerPart-small end*/
+/* Header End*/
+
+
+/* main */
+
+main {
+    padding-right: 16rem;
+}
+
+/* About section */
+.about {
+    width: 100%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 8rem;
+}
+
+.about img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about .details {
+    padding: 0 8rem;
+    text-align: left;
+}
+
+.about .details h4 {
+    color: #0f542b;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.about .details p {
+    line-height: 1.5rem;
+}
+
+/* About section end */
+
+/* Hallway Section */
+.hallway {
+    text-align: center;
+}
+
+
+
+.hallway .hallway-explain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5rem;
+    grid-auto-flow: row dense;
+}
+
+.hallway .hallway-explain .box {
+    padding: 3.375rem 8rem;
+    background-color: #eaf2ed;
+}
+
+#normal {
+    background-color: #f6faf8;
+}
+
+.hallway .hallway-explain .box img {
+    width: 10rem;
+}
+
+
+.hallway .hallway-explain h3 {
+    color: #0f542b;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+.hallway .hallway-explain p {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2srem;
+}
+
+
+
+.full-schedule{
+    text-align: center;
+}
+
+.full-schedule .section-details p{
+    display: inline-block;
+    text-align: center;
+}
+
+.full-schedule .schedule {
+    margin-left: 20rem;
+}
+
+.full-schedule .schedule-card {
+    position: relative;
+}
+
+.schedule-card::before {
+    content: "9.00am";
+    position: absolute;
+    display: block;
+    top:2rem;
+    left: -15rem;
+    border-bottom: solid rgb(211, 211, 211) 1px;
+    width: 10rem;
+    text-align: left;
+    color: rgb(104, 104, 104);
+    font-size: 1.1rem;
+    padding-bottom: 0.2rem;
+}
+
+.schedule-card {
+    margin-right: 5rem;
+    padding: 3.375rem;
+}
+
+#schedule-card-current{
+    background-color: #eaf2ed;
+}
+
+.schedule-card .profile-column {
+    width: 20rem;
+    text-align: left;
+}
+
+.schedule-card .profile-column img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-card .schedule-details {
+    text-align: left;
+}
+
+.schedule-card .schedule-details h6 {
+    color: #0f542b;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-card .schedule-details .speaker {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Hallway Section End*/
+
+
+
+/* Location */
+.location {
+    text-align: center;
+    padding: 8rem;
+}
+
+.location .left{
+    width: 50%;
+    background: url("https://summit.microsoftedge.com/assets/images/emerald-pattern.svg");
+    padding: 3.375rem;
+    color: white;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.location .right {
+    background: url("https://summit.microsoftedge.com/assets/images/venue-m.jpg");
+    width: 50%;
+    padding: 3.375rem;
+    color: white;
+    height: 50rem;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+}
+
+.location .right::before {
+    content: " ";
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-color: #0a3219;
+    opacity: 0.8;
+}
+
+.location .right p {
+    position: relative;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.location-btm {
+    display: flex;
+
+}
+
+.btm-left {
+    width: 70%;
+    height: auto;
+}
+
+.btm-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btm-right{
+    width: 30%;
+    padding: 5rem;
+    
+    background-color: #eaf2ed;
+}
+
+.btm-right h3 {
+    margin-bottom: 1rem;
+}
+
+.btm-right p {
+    line-height: 1.2rem;
+}
+
+
+/* Location End */
+
+/* main end */
